@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1 class="title_todoApp">Todo App</h1>
+    <form id="formAction">
+        <div class="form_container">
+            <div class="group-inpt">
+                <label class="form_label">titulo de la tarea</label>
+                <input 
+                    type="text" 
+                    name="TitleTarea" 
+                    placeholder="Nombra tu tarea"
+                    class="form_input" 
+                    id="form_title"
+                />
+            </div>
+
+            <div class="group-inpt">
+                <label class="form_label">Descripcion de la tarea</label>
+                <textarea 
+                    name="descriptiontarea" 
+                    class="form_input"
+                    placeholder="contenido de la tarea" 
+                    id="form_description"
+                ></textarea>
+            </div>
+
+            <div class="group-inpt group-inpt--check">
+                <input 
+                    type="checkbox" 
+                    name="ValidTarea" 
+                    class="form_input form_input--check" 
+                />
+                <label class="form_label">Inportante</label>
+            </div>
+            <button
+                class="btn btn--form"
+                id="btnForm"
+                type="submit"
+            >
+                agg tarea
+            </button>
+        </div>
+    </form>
+
+    <div class="wrapper" >
+        <div class="card_header"></div>
+        <ul class="cards" id="wrapper">
+
+            
+
+            <!-- <div class="container_card cards--tached">
+                <h5 class="card_title">Titulo de la tarea</h5>
+                <p class="card_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quas labore hic distinctio ullam architecto commodi ab cum ipsa nam?</p>
+                
+                <div class="card_content">
+                    <span class="card_valid">Importante</span>
+
+                    <button class="btn--valid">
+                        valid
+                    </button>
+                </div>
+            </div> -->
+        </ul>
+
+        <div class="card_footer"></div>
+    </div>
+
+
+
+
+    <template id="templateTareas">
+        <li class="container_card">
+            <h5 class="card_title">Titulo de la tarea</h5>
+            <p class="card_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quas labore hic distinctio ullam architecto commodi ab cum ipsa nam?</p>
+            
+            <div class="card_content">
+                <span class="card_valid">Importante</span>
+
+                <button class="btn--valid" data-btn="btn_valid">
+                    valid
+                </button>
+            </div>
+        </li>
+    </template>
+
+    <script src="./app.js"></script>
+</body>
+</html>
